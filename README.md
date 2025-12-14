@@ -27,7 +27,37 @@ Inside **ami_seed_none.R**, modify the input line:
 ```
 input_csv <- "path/to/aak100_gene_renamed-2.csv"
 ```
-input_csv <- "path/to/aak100_gene_renamed-2.csv"
 
 To run the 181-gene noise dataset, change it to:
 
+```
+input_csv <- "path/to/noise data.csv"
+```
+
+## Running the JSD Pipeline
+
+Inside **jsd_seed_none.R**, modify the input line:
+
+```
+input_csv <- "path/to/aak100_gene_renamed-2.csv"
+```
+
+To run the 181-gene noise dataset, change it to:
+
+```
+input_csv <- "path/to/noise data.csv"
+```
+
+
+## Method Overview
+
+Both the AMI and JSD pipelines follow a consistent, multi-step workflow for gene clustering:
+- Load and Preprocess the gene expression matrix.
+- Partition the Data into Full, MGS1, and MGS4 subsets.
+- Compute Pairwise Similarity using either AMI or JSD.
+- Edge Thresholding: Retain the top 5% strongest edges (quantile thresholding).
+- Graph Construction: Construct a weighted undirected graph using the igraph package.
+- Community Detection: Apply Walktrap and Leiden community detection algorithms, running each with 100 random seeds for robust analysis.
+- Hub Metric Computation: Compute key hub metrics for genes, including kWithin, strength, degree, and betweenness.
+- Hub Gene Extraction: Extract the top 10% hub genes per seed.
+- Aggregation and Export: Aggregate all results across seeds, partitions, and algorithms, and export them.
