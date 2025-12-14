@@ -18,5 +18,6 @@ Both AMI and JSD scripts share the same structure; only the input dataset is cha
 | `aak100_gene_renamed-2.csv` | Preprocessed AMD dataset with **81 curated genes**. |
 | `noise data.csv` | Dataset with **181 genes** (81 AMD genes + 100 real noise genes). |
 | `ami_seed_none.R` | Complete AMI-based pipeline (100 seeds). |
+| `jsd_seed_none.R` | Complete JSD-based pipeline (100 seeds). |
 
 
