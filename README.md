@@ -20,4 +20,10 @@ Both AMI and JSD scripts share the same structure; only the input dataset is cha
 | `ami_seed_none.R` | Complete AMI-based pipeline (100 seeds). |
 | `jsd_seed_none.R` | Complete JSD-based pipeline (100 seeds). |
 
+## Running the AMI Pipeline
+
+Inside **ami_seed_none.R**, modify the input line:
+
+```r
+input_csv <- "path/to/aak100_gene_renamed-2.csv"
 
