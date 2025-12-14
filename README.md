@@ -26,6 +26,7 @@ Inside **ami_seed_none.R**, modify the input line:
 
 ```r
 input_csv <- "path/to/aak100_gene_renamed-2.csv"
+```r
 
 To run the 181-gene noise dataset, change it to:
 
