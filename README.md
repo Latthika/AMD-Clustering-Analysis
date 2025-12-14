@@ -27,3 +27,30 @@ Inside **ami_seed_none.R**, modify the input line:
 ```r
 input_csv <- "path/to/aak100_gene_renamed-2.csv"
 
+To run the 181-gene noise dataset, change it to:
+
+```r
+input_csv <- "path/to/noise data.csv"
+
+No other modifications are needed.
+
+Run the script:
+
+```r
+Rscript ami_seed_none.R
+
+**## Running the JSD Pipeline**
+
+```r
+Rscript jsd_seed_none.R
+
+Update the dataset path inside jsd_seed_none.R:
+```r
+input_csv <- "path/to/aak100_gene_renamed-2.csv"
+
+Or for the noise dataset:
+
+```r
+input_csv <- "path/to/noise data.csv"
+
+The script structure remains the same.
